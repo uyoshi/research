@@ -52,7 +52,7 @@ def gap (seq1,seq2,j,i):
 
     gap_cost = gap_matrix[seq1][seq2]
     if i == 1 and j == 1:
-        print('置換行列')
+        print('Substitution Matrix')
         print(gap_matrix)
     return gap_cost
 
@@ -154,7 +154,7 @@ def traceback (seq1,seq2,score_matrix,trace_matrix):
    y = len(seq2)
    m = l // x
    n = l%x
-   print('最大値index')
+   print('Max index')
    print(n,m,score_matrix[m][n])
 
 
@@ -218,24 +218,26 @@ def traceback (seq1,seq2,score_matrix,trace_matrix):
 
 def main():
  #配列を入力する場合
+'''
  seq1 = '0'+input ('アラインメントする最初の配列:')
  seq2 = '0'+input ('アラインメントする二番目の配列:')
  '''
+
  #ランダムに配列生成する場合
- length = int(input('最長配列の記入'))
- length = 4000
+ #length = int(input('最長配列の記入'))
+ length = 10000
  seq1 = '0' + generate_seq(length)
  seq2 = '0' + generate_seq(length)
- '''
+
  print(seq1[1:])
  print(seq2[1:])
  score_matrix,trace_matrix = DP(seq1,seq2)
- print('スコア行列')
+ print('Score Marix')
  print(score_matrix)
- print('トレース行列')
+ print('Trace Matrix')
  print(trace_matrix)
  new_seq1,new_seq2=traceback(seq1,seq2,score_matrix,trace_matrix)
- print('アラインメントされた配列')
+ print('alignment sequences')
  print(new_seq1)
  print(new_seq2)
 
