@@ -218,14 +218,14 @@ def traceback (seq1,seq2,score_matrix,trace_matrix):
 
 def main():
  #配列を入力する場合
-'''
- seq1 = '0'+input ('アラインメントする最初の配列:')
- seq2 = '0'+input ('アラインメントする二番目の配列:')
- '''
+
+ #seq1 = '0'+input ('アラインメントする最初の配列:')
+ #seq2 = '0'+input ('アラインメントする二番目の配列:')
+ 
 
  #ランダムに配列生成する場合
  #length = int(input('最長配列の記入'))
- length = 10000
+ length = 10
  seq1 = '0' + generate_seq(length)
  seq2 = '0' + generate_seq(length)
 
